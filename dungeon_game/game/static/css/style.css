@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Pixel'; /* Choose a name for the font */
+    src: url('font/PixelEmulator-xq08.ttf') format('truetype'); /* Specify the path to your font file */
+    font-weight: normal; /* Optional: specify font weight */
+    font-style: normal; /* Optional: specify font style */
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color:#08061e;
+    color:#ff1975;  
+    font-family: 'Pixel', sans-serif;;  
+}
+#game-container {
+    text-align: center;
+    /* background-color: #ff1975; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+#dungeon-grid {
+    display: grid;
+    gap: 5px;
+    margin: 20px 0;
+}
+.cell {
+    border: 1px solid white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cell-grid {
+    display: grid;
+    gap: 10px;
+}
+.cell-item {
+    position: relative;
+    transition: transform 0.3s;
+}
+.cell-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+.cell-image {
+    width: 40px;
+    height: 40px;
+    /* object-fit: cover; */
+}
+.cell-damage {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0,0,0,0.7);
+    color: #ff1975;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.cell-legend-image{
+    width: 40px;   /* Set desired width */
+    height: 40px;  /* Set desired height */
+    object-fit: cover; 
+}
+.legend-item div {
+    /* Optional: Control the styling of the text part */
+    flex-grow: 1;                 /* Allow text to take up remaining space */
+}
+
+/* Optional: Add a little more space between the legend items and make text look better */
+.legend-item strong {
+    font-weight: bold;
+}
+
+.legend-item p {
+    margin: 0;                    /* Remove default paragraph margin */
+    font-size: 0.875rem;           /* Smaller font size for the damage text */
+    color: #4b5563;                /* Gray color for text */
+}
+#game-heading img {
+    width: 2em; /* Relative to the text size */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}

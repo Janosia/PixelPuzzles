@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>Dungeon Survival Game</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body >
+    <div >
+        <h1 id= "game-heading"><img src="static/image/magic-book.png" alt="Dungeon Icon">
+            <img src="static/image/love-potion.png" alt="Potion"> Dungeon Game
+            <img src="static/image/crystal-ball.png" alt="Sword Icon">
+            <img src="static/image/dragon.png" alt="Shield Icon"></h1>
+        
+        
+        <div >
+            <!-- Dungeon Grid -->
+            <div >
+                <div id="dungeon-grid" class="cell-grid"></div>
+                <div >
+                    <p>Minimum Health Required: <span id="min-health" class="font-bold"></span></p>
+                </div>
+                <button id="new-game-btn" >
+                    New Dungeon
+                </button>
+            </div>
+
+            <!-- Legend -->
+            <div>
+                <h2 >Dungeon Legend</h2>
+                <div id="cell-legend" >
+                    <!-- Legend will be populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/static/scripts/game.js"></script>
+</body>
+</html>
